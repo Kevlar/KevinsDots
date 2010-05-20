@@ -1,0 +1,56 @@
+alias cp='nocorrect cp'
+
+alias mv='nocorrect mv'
+alias rm='nocorrect rm -ir'
+alias mkdir='nocorrect mkdir'
+alias :q='exit'
+alias :wq='exit'
+
+alias df='df -h'
+alias du='du -h'
+alias pstree='pstree -h'
+
+alias a="ls "
+alias aa="ls -a "
+alias al="ls -l"
+alias aal="ls -al"
+alias ala="ls -al"
+alias la="ls -a"
+alias ll="ls -l"
+alias lla="ls -al"
+alias lal="ls -al"
+
+alias mkdir="mkdir -p"
+
+alias c="cd "
+alias c..="cd .."
+
+alias h="htop"
+alias ef="ps -ef"
+alias dus="du -sc ./*"
+
+alias emacsd="command emacs --daemon"
+alias emacs="emacsclient -c -nw"
+alias semacs="sudo emacs -nw"
+
+alias rlwrap="rlwrap -a -c -pcyan"
+
+alias ocaml="rlwrap ocaml"
+alias rsync="rsync -h -t --progress --inplace -e ssh"
+alias resource="source ~/.zshrc"
+alias wget="wget -c "
+alias clear-hist="echo "" > ~/.zsh/.history"
+
+alias bc="rlwrap -S \"bc: \" bc -l"
+alias grep="grep -d skip --color=auto -n"
+
+
+# wget current directory, where all downloads are in a .wget file
+alias wga="wget -c -i .wget"
+
+alias wpa="sudo ~/wpa"
+
+
+
+
+

@@ -1,0 +1,19 @@
+[alias]
+	ci   = commit
+	st   = status
+	co   = checkout
+	di   = diff --color-words
+	move = mv
+	up   = pull
+	stat = status
+	delete = rm
+	export = archive
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	pager =
+[user]
+	name = Michael Ilseman
+	email = michael.ilseman@gmail.com

@@ -1,0 +1,15 @@
+URxvt.buffered:         true
+URxvt.scrollstyle:      plain
+URxvt.saveLines:        10000
+URxvt.background:       black
+URxvt.foreground:       white
+URxvt.cursorColor:      green
+URxvt.underlineColor:   yellow
+URxvt.font:             xft:Terminus:pixelsize=18:antialias=false
+URxvt.boldFont:         xft:Terminus:bold:pixelsize=18:antialias=false
+URxvt.perl-ext-common:  default,tabbed,matcher
+URxvt.title:            ArchLinux
+URxvt.scrollBar:        false
+URxvt.jumpScroll:       true
+URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.matcher.button:   1 

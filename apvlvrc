@@ -1,0 +1,11 @@
+" map n to <C-f> to goto next page
+map n <C-f>
+
+" and p to prepage
+map p <C-b>
+
+set fullscreen=yes
+set zoom=fitheight
+set continuous=yes
+set continuouspad=5
+set pdfcache=1000000

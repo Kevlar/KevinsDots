@@ -1,0 +1,8 @@
+#!/bin/bash
+killall wpa_supplicant
+killall dhcpcd
+ifconfig wlan0 down
+ifconfig wlan0 up
+wpa_supplicant -B -Dwext -i wlan0 -c /etc/wpa_supplicant.conf
+sleep 5
+dhcpcd wlan0

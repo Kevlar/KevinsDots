@@ -1,0 +1,18 @@
+(defun add-path (p)
+  (setq load-path (cons p load-path)))
+
+(add-path "~/emacs/config")
+(add-path "~/emacs/site-lisp")
+
+(load "custom.el")
+(load "libraries.el")
+(load "keybindings.el")
+(load "options.el")
+(load "mode-configs.el")
+
+;; Color Theme ;;
+;;(color-theme-initialize)
+;;(color-theme-calm-forest)
+
+
+;;; Auto-saved macros ( to the end of the file) ;;;
