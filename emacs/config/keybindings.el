@@ -1,12 +1,11 @@
 ;;;Key shortcuts
 (global-set-key "\C-o" 'find-file)
 (global-set-key "\M-o" 'find-file-other-window)
-(global-set-key "\C-z" 'switch-to-buffer)
 ;(global-set-key "\M-z" 'switch-to-buffer-other-window)
 (global-set-key "\M-z"   'zap-up-to-char)          ;; I like better than zap-to-char
 (global-set-key "\M-i" 'help)
-(global-set-key "\C-v" 'other-window)
-(global-set-key "\M-v" 'delete-other-windows)
+;(global-set-key "\C-v" 'other-window)
+;(global-set-key "\M-v" 'delete-other-windows)
 ;(global-set-key "\M-\C-i" 'delete-window)
 (global-set-key "\M-m" 'open-line)
 (global-set-key "\C-h"   'backward-delete-char)    ;; I like terminal style backspace
@@ -15,7 +14,6 @@
 
 ;(global-set-key "\C-cz"  'zsh)
 ;(global-set-key "\C-ce"  'eshell)
-;(global-set-key "\C-z"   'vip-mode)                ;; Easy switching to Vi mode
 (global-set-key "\M-g"   'goto-line)
 (global-set-key "\C-cl"  'linum-mode)
 ;(global-set-key "\C-cw"  'kill-region)             ;; Replaces C-w

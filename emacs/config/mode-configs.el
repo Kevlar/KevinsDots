@@ -1,4 +1,4 @@
-;; Org Mode
+;;; Org Mode
 (unless (assoc "\\.org\\'" auto-mode-alist)
   (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode)))
 (add-hook 'org-mode-hook (lambda () (local-set-key "\M-m" 'org-meta-return)))

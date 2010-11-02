@@ -29,8 +29,7 @@ alias h="htop"
 alias ef="ps -ef"
 alias dus="du -sc ./*"
 
-alias emacsd="command emacs --daemon"
-alias emacs="emacsclient -c -nw"
+alias emacs="emacs -nw"
 alias semacs="sudo emacs -nw"
 
 alias rlwrap="rlwrap -a -c -pcyan"

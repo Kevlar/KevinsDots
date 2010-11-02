@@ -10,9 +10,9 @@
 (load "options.el")
 (load "mode-configs.el")
 
+(setq c-default-style "stroustrup")
+
 ;; Color Theme ;;
 ;;(color-theme-initialize)
 ;;(color-theme-calm-forest)
-
-
 ;;; Auto-saved macros ( to the end of the file) ;;;
