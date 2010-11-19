@@ -4,6 +4,9 @@
 # turn on visual bell
 vbell on
 
+# escape char
+escape ^\\
+
 # default scrollback to 5000 lines
 defscrollback 5000
 
