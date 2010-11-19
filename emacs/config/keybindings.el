@@ -1,11 +1,8 @@
 ;;;Key shortcuts
 (global-set-key "\C-o" 'find-file)
 (global-set-key "\M-o" 'find-file-other-window)
-;(global-set-key "\M-z" 'switch-to-buffer-other-window)
 (global-set-key "\M-z"   'zap-up-to-char)          ;; I like better than zap-to-char
 (global-set-key "\M-i" 'help)
-;(global-set-key "\C-v" 'other-window)
-;(global-set-key "\M-v" 'delete-other-windows)
 ;(global-set-key "\M-\C-i" 'delete-window)
 (global-set-key "\M-m" 'open-line)
 (global-set-key "\C-h"   'backward-delete-char)    ;; I like terminal style backspace

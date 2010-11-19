@@ -52,8 +52,8 @@ fi
 export PATH="$PATH:$HOME/maude-linux/"
 ###########export AWT_TOOLKIT=MToolkit
 
-export SVN_EDITOR="emacs -nw"
-export GIT_EDITOR="emacs -nw"
+export SVN_EDITOR="emacsclient -c -nw"
+export GIT_EDITOR="emacsclient -c -nw"
 
 export  _JAVA_AWT_WM_NONREPARENTING=1
 
