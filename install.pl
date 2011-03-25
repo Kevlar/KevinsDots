@@ -39,12 +39,7 @@ unless(eval {symlink('', ''); 1;}) {
 my %links = (
     # Mine
 #    kgs => 'bin/kgs',
-    xmodmap => '.xmodmap',
-    xsession => '.xsession',
-    xinitrc => '.xinitrc',
-    xmonad => '.xmonad',
     apvlvrc => '.apvlvrc',
-    maude_linux => 'maude-linux',
     emacs => 'emacs',
     dotemacs => '.emacs',
     nethackrc => '.nethackrc',
@@ -79,9 +74,6 @@ my %links = (
 
     sh      => '.sh',
     shinit  => '.shinit',
-
-    Xdefaults  => '.Xdefaults',
-    Xresources => '.Xresources',
 
     'uncrustify.cfg' => '.uncrustify.cfg',
     'indent.pro'     => '.indent.pro',

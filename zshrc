@@ -57,4 +57,3 @@ export GIT_EDITOR="emacsclient -c -nw"
 
 export  _JAVA_AWT_WM_NONREPARENTING=1
 
-fortune

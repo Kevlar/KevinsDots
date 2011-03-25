@@ -31,7 +31,7 @@ alias dus="du -sc ./*"
 
 alias emacs="emacsclient -c -nw"
 alias semacs="sudo emacs -nw"
-alias emacsd="emacs --daemon"
+alias emacsd="command emacs --daemon"
 
 alias rlwrap="rlwrap -a -c -pcyan"
 
