@@ -3,6 +3,7 @@
 
 (add-path "~/emacs/config")
 (add-path "~/emacs/site-lisp")
+(add-path "~/emacs/site-lisp/themes")
 
 (load "custom.el")
 (load "libraries.el")
@@ -13,6 +14,8 @@
 (setq c-default-style "stroustrup")
 
 ;; Color Theme ;;
-;;(color-theme-initialize)
-;;(color-theme-calm-forest)
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-kevlar)
+
 ;;; Auto-saved macros ( to the end of the file) ;;;

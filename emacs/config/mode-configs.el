@@ -5,24 +5,6 @@
 (add-hook 'org-mode-hook 'org-indent-mode)
 
 
-;;; Haskell ;;;
-(load "~/emacs/site-lisp/haskell-mode-2.4/haskell-site-file")
-(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-(add-hook 'haskell-mode-hook ( lambda () (global-unset-key "\C-c \C-g")))
-(add-hook 'haskell-mode-hook ( lambda () (local-unset-key "\C-c \C-g")))
-(add-hook 'haskell-mode-hook ( lambda () (setq haskell-indent-offset 2)))
-;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
-;;; End Haskell ;;;
-
-
-;;; OCaml ;;;
-(setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
-(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
-(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
-;;; End Ocaml ;;;
-
-
 ;;; Yaml ;;;
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 ;;; End Yaml ;;;
