@@ -19,9 +19,6 @@ termcapinfo * vb@
 # see, it's a bell, get it?
 vbell_msg "Ring Ring Ring Ring Ring Ring"
 
-# make screen even more fun
-nethack on
-
 # mess with bold
 attrcolor b ".I"
 
