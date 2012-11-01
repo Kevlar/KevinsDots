@@ -3,6 +3,7 @@
 # Trivial modifications: David Majnemer
 # vim:set nowrap:
 
+
 autoload compinit; compinit -d "${HOME}/.zsh/.zcompdump"
 
 autoload age
@@ -44,13 +45,11 @@ fi
 # extras
 if [ -d "${HOME}/.zsh" ] ; then
 	for file in "${HOME}"/.zsh/*(N.x:t) ; do
-		. "${HOME}/.zsh/${file}"
+	        . "${HOME}/.zsh/${file}"
 	done
 fi
 
 # Path
-export PATH="$PATH:$HOME/maude-linux/"
-###########export AWT_TOOLKIT=MToolkit
 
 export SVN_EDITOR="emacsclient -c -nw"
 export GIT_EDITOR="emacsclient -c -nw"
