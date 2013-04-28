@@ -1,61 +1,111 @@
-# Originally by Deason
-# Modified by Majnematic
+#
+# Example of a user's .screenrc file
+#
 
-# turn on visual bell
-vbell on
-
-# escape char
+# Use control-\ instead of control-a
 escape ^\\
 
-# default scrollback to 5000 lines
-defscrollback 5000
+# This is how one can set a reattach password:
+# password ODSJQf.4IJN7E    # "1234"
 
-# when in history mode, use incremental searching
-markkeys "^S=/:^R=?"
+# no annoying audible bell, please
+vbell on
 
-# turn off visual bell
-termcapinfo * vb@
+# detach on hangup
+autodetach on
 
-# see, it's a bell, get it?
-vbell_msg "Ring Ring Ring Ring Ring Ring"
-
-# mess with bold
-attrcolor b ".I"
-
-# erase background with current bg color
-defbce on
-
-# turn on utf8
-defutf8 on
-
-# changes from the default binding " to `windowlist -b', so we don't create
-# a new empty window
-bind \" windowlist
-
-# includes window title name in activity/bell messages
-activity "Activity in window %n (%t)"
-bell_msg "Bell in window %n (%t)"
-
-# Argh, choosing a hardstatus line is difficult
-# This can only be explained by example, but it takes too much damn space.
-# The screen man page is actually good documentation for this, but it takes
-# a little while to read. Look for "STRING ESCAPES', and that section will
-# explain what all this line noise means.
-#
-# White background, black text, underlined bold current window
-#hardstatus alwayslastline "%{= Wk}%-w%50>%{=ub dd}%n %t%?(%u)%?%{-}%+w%<"
-# Normal text, underlined bold current window
-#hardstatus alwayslastline "%{= dd}%-w%50>%{=ub}%n %t%?(%u)%?%{-}%+w%<"
-# Blue background, white text, underlined bold current window
-hardstatus alwayslastline "%{= bw}%-w%50>%{=ub dd}%n %t%?(%u)%?%{-}%+w%<"
-
+# don't display the copyright page
 startup_message off
 
-# Show the screen version just for a second
-msgwait 1
-version
+# emulate .logout message
+pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
 
-# how many seconds a message appears when we don't press any keys
-msgwait 2
+# advertise hardstatus support to $TERMCAP
+termcapinfo  * '' 'hs:ts=\E_:fs=\E\\:ds=\E_\E\\'
+termcapinfo rxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
 
-altscreen on
+# make the shell in every window a login shell
+#shell -$SHELL
+
+# autoaka testing
+# shellaka '> |tcsh'
+# shellaka '$ |sh'
+
+# set every new windows hardstatus line to somenthing descriptive
+defhstatus "screen: ^En (^Et)"
+
+defscrollback 10000
+
+# don't kill window after the process died
+# zombie "^["
+
+# enable support for the "alternate screen" capability in all windows
+# altscreen on
+
+
+################
+#
+# keybindings
+#
+
+#remove some stupid / dangerous key bindings
+bind k
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+#make them better
+bind 'K' kill
+bind 'I' login on
+bind 'O' login off
+bind '}' history
+
+# Yet another hack:
+# Prepend/append register [/] to the paste if ^a^] is pressed.
+# This lets me have autoindent mode in vi.
+register [ "\033:se noai\015a"
+register ] "\033:se ai\015a"
+bind ^] paste [.]
+
+################
+#
+# default windows
+#
+
+# screen -t local 0
+# screen -t mail 1 mutt
+# screen -t 40 2 rlogin server
+
+# caption always "%3n %t%? @%u%?%? [%h]%?%=%c"
+# hardstatus alwaysignore
+# hardstatus alwayslastline "%Lw"
+hardstatus alwaysstring "%h"
+backtick 100 5 5 tail -1 /var/tmp/mprem.stats.top
+# caption always "%{= kw} %-w%{= wk}%n*%t%{-}%+w%{= kw} %=%d %M %0c %{g}%H%{-}"
+caption always "%?%F%{=b kb}>>%{=b kw}%:%{= kw}  %? %-w%{= wk}%n*%t%{-}%+w%{= kw} %?%F%{=b kb}<<%{=b kw}%:%{= kw}  %?%=%d %M %0c %{b}%l %{g}%H%{-}"
+
+# status
+# hardstatus alwayslastline '%{= M} %H%{= G} %l %= %{= w}%-w%{+b r}%n*%t%{-b r}%{w}%+w %= %{c}%d %D %{B}%c '
+
+# add CPU idle/sustem/user/interrupt stats
+# caption always '%{= wk} %200` %= %100` %='
+
+# bind = resize =
+# bind + resize +1
+# bind - resize -1
+# bind _ resize max
+#
+# defnonblock 1
+# blankerprg rain -d 100
+# idle 30 blanker
+#
+
+
+#colors!
+attrcolor b ".I"
+#termcapinfo rxvt-unicode 'Co#256:AB=\E[48;5%dm:AF=\E[38;5;%dm'
+#termcapinfo rxvt-unicode 'tc=xterm-256color'
+defbce "on"
+defutf8 "on"
